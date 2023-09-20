@@ -4,6 +4,7 @@ import colors from "colors"
 import dotenv from "dotenv"
 import { connection } from "./config/database/connection.js"
 import { createUser } from "./routes/users.routes.js"
+// import cors from "@fastify/cors"
 
 // TODO: enviroments 
 dotenv.config()
@@ -19,6 +20,9 @@ const fastify = Fastify({
 
 // TODO: plugins 
 fastify.register(createUser)
+// await fastify.register(cors,{
+//     origin: true
+// })
 
 // TODO: Run server!
 const bootstrap = async() =>{
