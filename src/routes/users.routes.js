@@ -2,10 +2,10 @@ import {
   createUserController,
   getUsers,
 } from "../controllers/users.controllers.js";
-import cacheInit from "../middlewares/cache.config.js";
+// import cacheInit from "../middlewares/cache.config.js";
 
 export const adminRoute = async (fastify, opts, done) => {
-  await fastify.get("/admin", cacheInit, getUsers);
+  await fastify.get("/admin", getUsers);
   done();
 };
 

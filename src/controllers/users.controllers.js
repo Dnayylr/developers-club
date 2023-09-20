@@ -45,9 +45,9 @@ export const getUsers = async (__request, reply)=>{
         const data = await userModel.find()
         if(!data){
             reply.send({ message: "error internal".red })
+            console.log("no funciona".red)
         }else{
-            reply.send({ message: "funciona".bgBlue })
-            reply.send({ showData: data })
+            reply.send({ message: "funciona", showData: data })
         }
 
     } catch (error) {

@@ -3,7 +3,7 @@ import Fastify from "fastify"
 import colors from "colors"
 import dotenv from "dotenv"
 import { connection } from "./config/database/connection.js"
-import { createUser } from "./routes/users.routes.js"
+import { createUser, adminRoute } from "./routes/users.routes.js"
 // import cors from "@fastify/cors"
 
 // TODO: enviroments 
@@ -20,6 +20,7 @@ const fastify = Fastify({
 
 // TODO: plugins 
 fastify.register(createUser)
+fastify.register(adminRoute)
 // await fastify.register(cors,{
 //     origin: true
 // })
