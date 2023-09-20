@@ -4,7 +4,7 @@ export const connection = async () =>{
     try {
         const URI_DB = process.env.MONGO_URI
     
-        mongoose.connect(URI_DB,{
+        mongoose.connect("mongodb+srv://itsrustydev:JavaScript2003@club-developers.otp8hdi.mongodb.net/",{
             useNewUrlParser: true,
             useUnifiedTopology: true
         })
