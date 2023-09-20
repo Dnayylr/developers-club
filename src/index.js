@@ -1,5 +1,5 @@
 import Fastify from "fastify"
-import cors from "cors"
+// import cors from "fastify-cors"
 import colors from "colors"
 import dotenv from "dotenv"
 import { connection } from "./config/database/connection.js"
@@ -23,7 +23,9 @@ fastify.register(createUser)
 // TODO: Run server!
 const bootstrap = async() =>{
     try {
-        await fastify.listen(PORT)
+        await fastify.listen({
+            port: PORT
+        })
         console.log(`listening on port ${PORT}`.green)
     } catch (error) {
         throw new Error(error)
