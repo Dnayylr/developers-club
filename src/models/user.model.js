@@ -18,8 +18,7 @@ const user = new mongoose.Schema(
             unique: true
         },
         carrera: {
-            type: Number,
-            unique: true
+            type: String,
         },
         question_one: { // ? por q quieres meterte a la carrera
             type: String,
