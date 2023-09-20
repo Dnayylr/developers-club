@@ -21,3 +21,5 @@ export const connection = async () =>{
         throw new Error(error)
     }
 }
+
+// actualizacion del dia, ptm tio
